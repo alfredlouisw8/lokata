@@ -33,7 +33,7 @@ export const getProduct = (slug: string): Promise<ProductType> => {
 	return sanityClient.fetch(productsQuery);
 };
 
-export const getSimilarProducts = (slug: string): Promise<ProductType> => {
+export const getSimilarProducts = (slug: string): Promise<ProductType[]> => {
 	const productsQuery = `*[_type == "product" && slug.current != '${slug}'][0...6] {
     _id,
     title,
