@@ -1,5 +1,6 @@
 import { urlFor } from "@/lib/sanity";
 import { ProductType } from "@/types";
+import { getPlaceholderImage } from "@/util";
 import Image from "next/image";
 
 type Props = {
@@ -16,7 +17,12 @@ export default function ProductDisplay({ product }: Props) {
 							key={i}
 							className="relative w-full aspect-[2/3] min-w-[240px] md:max-w-[540px]"
 						>
-							<Image src={urlFor(image).url()} alt={product.title} fill />
+							<Image
+								src={urlFor(image).url()}
+								alt={product.title}
+								fill // @ts-ignore
+								placeholder={getPlaceholderImage()}
+							/>
 						</div>
 					))}
 				</div>

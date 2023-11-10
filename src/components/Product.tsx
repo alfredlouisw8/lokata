@@ -1,5 +1,6 @@
 import { urlFor } from "@/lib/sanity";
 import { ProductType } from "@/types";
+import { getPlaceholderImage } from "@/util";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,6 +17,8 @@ export default function Product({ product }: Props) {
 						src={urlFor(product.imagesGallery[0]).url()}
 						alt="product"
 						fill
+						// @ts-ignore
+						placeholder={getPlaceholderImage()}
 					/>
 				</div>
 				<p className="text-xs lg:text-sm">{product.title}</p>
