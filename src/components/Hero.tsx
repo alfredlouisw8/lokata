@@ -18,7 +18,7 @@ export default function Hero({ desktopImages, mobileImages }: Props) {
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 5000,
 		pauseOnHover: false,
 		arrows: false,
