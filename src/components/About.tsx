@@ -3,8 +3,9 @@ import Image from "next/image";
 export default function About() {
 	return (
 		<section className="py-16 md:py-40 text-center">
-			<div className="container mx-auto px-6 md:px-40 flex flex-col gap-10">
+			<div className="container mx-auto px-6 md:px-40 flex flex-col gap-10 items-center">
 				<h1 className="text-3xl font-bold">EDITOR&apos;S LETTER</h1>
+				<Image src="/img/logo.png" alt="logo" width={75} height={75} />
 				<p className="text-sm">
 					In a world that celebrates individuality and diversity, we believe in
 					the power of modesty. Our fashion campaign is a celebration of the
