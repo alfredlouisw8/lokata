@@ -20,3 +20,7 @@ const toBase64 = (str: string) =>
 export function getPlaceholderImage() {
 	return "data:image/svg+xml;base64," + toBase64(shimmer(1000, 1000));
 }
+
+export function numberWithCommas(x: number) {
+	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}

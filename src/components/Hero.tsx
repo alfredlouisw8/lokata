@@ -28,8 +28,7 @@ export default function Hero({ desktopImages, mobileImages }: Props) {
 
 	const { height, width } = useWindowSize();
 
-	const images = desktopImages;
-	console.log(images);
+	const images = width! < 768 ? mobileImages : desktopImages;
 	return (
 		<section className="relative mb-[-7px]">
 			<Logo absolute />

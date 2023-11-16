@@ -1,6 +1,6 @@
 import { urlFor } from "@/lib/sanity";
 import { ProductType } from "@/types";
-import { getPlaceholderImage } from "@/util";
+import { getPlaceholderImage, numberWithCommas } from "@/util";
 import Image from "next/image";
 
 type Props = {
@@ -22,6 +22,7 @@ export default function ProductDisplay({ product }: Props) {
 								alt={product.title}
 								fill // @ts-ignore
 								placeholder={getPlaceholderImage()}
+								style={{ objectFit: "cover" }}
 							/>
 						</div>
 					))}
@@ -29,7 +30,7 @@ export default function ProductDisplay({ product }: Props) {
 				<div className="flex flex-col gap-6 md:w-2/6 lg:w-1/5 sticky top-6 self-start">
 					<h1 className="text-xl">{product.title}</h1>
 					<p className="text-xs">{product.description}</p>
-					<p className="text-xs">IDR {product.price}</p>
+					<p className="text-xs">IDR {numberWithCommas(product.price)}</p>
 					<p className="text-xs">
 						Measurement: {product.measurement}
 						<br></br>Material: {product.material}

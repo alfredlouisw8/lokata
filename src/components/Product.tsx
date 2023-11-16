@@ -1,6 +1,6 @@
 import { urlFor } from "@/lib/sanity";
 import { ProductType } from "@/types";
-import { getPlaceholderImage } from "@/util";
+import { getPlaceholderImage, numberWithCommas } from "@/util";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,10 +19,13 @@ export default function Product({ product }: Props) {
 						fill
 						// @ts-ignore
 						placeholder={getPlaceholderImage()}
+						style={{ objectFit: "cover" }}
 					/>
 				</div>
 				<p className="text-xs lg:text-sm">{product.title}</p>
-				<p className="text-xs lg:text-sm">IDR {product.price}</p>
+				<p className="text-xs lg:text-sm">
+					IDR {numberWithCommas(product.price)}
+				</p>
 			</div>
 		</Link>
 	);
