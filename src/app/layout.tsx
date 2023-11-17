@@ -8,6 +8,8 @@ export const metadata: Metadata = {
 		"In a world that celebrates individuality and diversity, we believe in the power of modesty. Our fashion campaign is a celebration of the elegance and strength that comes from dressing with dignity.",
 };
 
+export const revalidate = 60;
+
 export default function RootLayout({
 	children,
 }: {
