@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { getSocials } from "@/queries";
 
 export const metadata: Metadata = {
 	title: "Lokata",
@@ -10,16 +11,17 @@ export const metadata: Metadata = {
 
 export const revalidate = 60;
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: {
 	children: React.ReactNode;
 }) {
+	const socials = await getSocials();
 	return (
 		<html lang="en">
 			<body className={`bg-primary text-secondary`}>
 				{children}
-				<Footer />
+				<Footer socials={socials} />
 			</body>
 		</html>
 	);

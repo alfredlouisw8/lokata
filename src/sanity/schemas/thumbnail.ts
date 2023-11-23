@@ -17,5 +17,25 @@ export default defineType({
       type: 'array',
       of: [{type: 'image'}],
     }),
+    defineField({
+      name: 'whatsapp',
+      title: 'whatsapp',
+      type: 'string',
+    }),
+    defineField({
+      name: 'instagram',
+      title: 'instagram',
+      type: 'string',
+    }),
+    defineField({
+      name: 'shopee',
+      title: 'shopee',
+      type: 'string',
+    }),
+    defineField({
+      name: 'tiktok',
+      title: 'tiktok',
+      type: 'string',
+    }),
   ],
 })

@@ -30,7 +30,7 @@ export default function Hero({ desktopImages, mobileImages }: Props) {
 
 	const images = width! < 768 ? mobileImages : desktopImages;
 	return (
-		<section className="relative mb-[-7px]">
+		<section className="relative mb-[-7px]" id="main">
 			<Logo absolute />
 			{width ? (
 				<SliderSlick settings={settings}>

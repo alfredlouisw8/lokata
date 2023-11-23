@@ -25,6 +25,7 @@
 
 html {
 	font-family: "SackersGothic";
+	scroll-behavior: smooth;
 }
 
 @layer components {

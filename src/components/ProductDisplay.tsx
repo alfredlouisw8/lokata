@@ -5,9 +5,10 @@ import Image from "next/image";
 
 type Props = {
 	product: ProductType;
+	whatsapp: string;
 };
 
-export default function ProductDisplay({ product }: Props) {
+export default function ProductDisplay({ product, whatsapp }: Props) {
 	return (
 		<section className="container py-10 px-6 mx-auto">
 			<div className="flex-wrap flex-col md:flex md:flex-row-reverse relative">
@@ -41,7 +42,10 @@ export default function ProductDisplay({ product }: Props) {
 						*The colors may be slightly difference due to camera flash or the
 						setting of your display screen*
 					</p>
-					<a href="#" className="underline text-xs bg-yellow py-1 px-2 w-fit">
+					<a
+						href={`${whatsapp}?text=${product.title}`}
+						className="underline text-xs bg-yellow py-1 px-2 w-fit"
+					>
 						SHOP NOW
 					</a>
 				</div>

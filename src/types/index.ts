@@ -12,6 +12,10 @@ export type ThumbnailType = {
 	description: string;
 	desktopImages: ImageSource[];
 	mobileImages: ImageSource[];
+	tiktok: string;
+	whatsapp: string;
+	instagram: string;
+	shopee: string;
 };
 
 export type ProductType = {
