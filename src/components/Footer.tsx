@@ -16,7 +16,9 @@ export default function Footer({ socials }: Props) {
 		e.preventDefault();
 		await createContact(email);
 		setEmail("");
-		toast.success("Subscribed");
+		toast.success(
+			"Welcome to the club! Get ready to be the first who receive our special deals."
+		);
 	}
 
 	return (
